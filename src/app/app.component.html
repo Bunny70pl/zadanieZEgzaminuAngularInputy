@@ -16,6 +16,9 @@
   <button (click)="zapizsNaKurs()" class="btn btn-primary ">Zapisz do kursu</button>
 </form>
 
+<h3>Dane z formularza</h3>
+<div>{{imie}} wybrala {{kursy[nrKursu - 1]}}</div>
+
 <hr>
 
 <select [(ngModel)] = "jezyk">

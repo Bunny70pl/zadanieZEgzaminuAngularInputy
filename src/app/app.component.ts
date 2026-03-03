@@ -14,12 +14,11 @@ export class AppComponent {
   kursy = ["Programowanie w C#","Podstawy angulara","Kurs Django"];
   jezyki = ["Python","C#","C++","Java"];
   imie = ""
-  nrKursu = ""
+  nrKursu!:number;
   jezyk = "";
   zapizsNaKurs(){
-    const nrKursuNumber = Number.parseInt(this.nrKursu);
-    if(nrKursuNumber <= 0 || nrKursuNumber > this.kursy.length) console.log(this.imie + " nie ma kursu o takim numerze")
-    else console.log(this.imie + " " + this.kursy[nrKursuNumber-1])
+    if(this.nrKursu <= 0 || this.nrKursu > this.kursy.length) console.log(this.imie + " nie ma kursu o takim numerze")
+    else console.log(this.imie + " " + this.kursy[this.nrKursu-1])
   }
   wyswietl(){
     console.log(this.jezyk)
